@@ -1,196 +1,289 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Noor Amjad's portfolio of business research, ESG benchmarking, data analysis, and project coordination.">
-  <meta name="theme-color" content="#6D213C">
-  <title>Noor Amjad — The Work Behind the Titles</title>
-  <style>
-    :root{--wine:#6D213C;--wine-dark:#421527;--cream:#F7F2EA;--paper:#FFFCF7;--ink:#282326;--muted:#71666A;--line:#DED2CE;--sage:#DCE4D8;--max:1120px}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-    a{color:inherit}
-    a:focus-visible,button:focus-visible{outline:3px solid #A65B77;outline-offset:4px}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
-    .brand{font-family:Georgia,"Times New Roman",serif;font-size:1.15rem;font-weight:700;letter-spacing:.04em;text-decoration:none;color:var(--wine)}
-    .navlinks{display:flex;gap:22px;flex-wrap:wrap}
-    .navlinks a{font-size:.86rem;text-decoration:none;color:var(--muted)}
-    .navlinks a:hover{color:var(--wine)}
-    .eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;font-weight:750;color:var(--wine)}
-    .hero{padding:clamp(64px,10vw,126px) 0 78px;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:end}
-    h1,h2,h3,p{margin-top:0}
-    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,8vw,6.7rem);line-height:.98;letter-spacing:-.055em;font-weight:500;margin:18px 0 26px;max-width:800px}
-    h1 em{font-weight:400;color:var(--wine)}
-    .intro{max-width:650px;font-size:clamp(1.05rem,2vw,1.25rem);color:#51464A}
-    .hero-note{border-left:2px solid var(--wine);padding:6px 0 6px 20px;color:var(--muted);font-size:.95rem}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid var(--wine);border-radius:3px;text-decoration:none;font-weight:700;font-size:.9rem}
-    .btn.primary{background:var(--wine);color:white}
-    .btn.secondary{color:var(--wine)}
-    .btn:hover{transform:translateY(-1px)}
-    .ticker{border-block:1px solid var(--line);padding:14px 0;color:var(--wine);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;overflow-wrap:anywhere}
-    section{padding:76px 0}
-    .section-head{display:grid;grid-template-columns:.55fr 1.45fr;gap:35px;margin-bottom:32px}
-    .section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.08;letter-spacing:-.035em;font-weight:500;margin-bottom:12px}
-    .section-head p{color:var(--muted);max-width:620px}
-    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .project{background:var(--paper);border:1px solid var(--line);padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;min-height:300px}
-    .project-top{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--wine);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:750}
-    .project h3{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.13;font-weight:500;margin:26px 0 14px}
-    .project p{color:var(--muted);margin-bottom:20px}
-    .project a{margin-top:auto;color:var(--wine);font-weight:750;text-decoration-thickness:1px;text-underline-offset:4px}
-    .project .note{font-size:.8rem;color:#84777B;margin-top:10px}
-    .principles{background:var(--wine-dark);color:var(--cream)}
-    .principles .eyebrow{color:#E9BFCB}
-    .principles .section-head p{color:#D7C5CB}
-    .principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-    .principle{border-top:1px solid #805365;padding-top:18px}
-    .principle .num{font-size:.78rem;color:#E9BFCB;letter-spacing:.12em}
-    .principle h3{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;font-weight:500;margin:14px 0 9px}
-    .principle p{color:#D7C5CB;font-size:.94rem}
-    .timeline{border-top:1px solid var(--line)}
-    .role{display:grid;grid-template-columns:.45fr 1.55fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
-    .role time{font-size:.82rem;color:var(--wine);font-weight:750}
-    .role h3{margin:0 0 5px;font-size:1.05rem}
-    .role p{margin:0;color:var(--muted);font-size:.94rem}
-    .skills{display:flex;flex-wrap:wrap;gap:9px}
-    .chip{padding:8px 12px;border:1px solid var(--line);background:rgba(255,252,247,.6);font-size:.88rem}
-    .contact{background:var(--sage)}
-    .contact-inner{display:grid;grid-template-columns:1fr .8fr;gap:45px;align-items:end}
-    .contact h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1;letter-spacing:-.04em;font-weight:500;margin:16px 0}
-    .contact p{color:#51464A;max-width:540px}
-    footer{padding:22px 0;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.8rem}
-    .small{font-size:.82rem;color:var(--muted)}
-    @media(max-width:760px){.hero,.section-head,.contact-inner{grid-template-columns:1fr}.hero{gap:28px;padding-top:70px}.hero-note{max-width:500px}.projects{grid-template-columns:1fr}.principle-grid{grid-template-columns:1fr;gap:18px}.role{grid-template-columns:1fr;gap:6px}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:14px}.section-head{gap:12px}section{padding:58px 0}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#241519">
+<title>Noor Amjad — Selected Work & Thinking</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wine:#6d213c;
+  --dark:#241519;
+  --cream:#f7f2ea;
+  --rose:#d9aab9;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',Arial,sans-serif;
+  --mono:'DM Mono',monospace;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--dark); font-family:var(--sans); overflow-x:hidden; }
+a { color:inherit; text-decoration:none; }
+::selection { background:var(--wine); color:white; }
+.loader {
+  position:fixed; inset:0; z-index:1000; background:var(--wine);
+  color:var(--cream); display:grid; place-items:center;
+  transition:transform 1s cubic-bezier(.77,0,.18,1);
+}
+.loader.hide { transform:translateY(-100%); }
+.loader p { font:11px var(--mono); letter-spacing:.2em; }
+.loader:after {
+  content:""; position:absolute; bottom:0; left:0; height:3px;
+  background:var(--rose); animation:load 1.5s ease forwards;
+}
+@keyframes load { to { width:100%; } }
+nav {
+  position:absolute; top:0; left:0; width:100%; padding:27px 6%;
+  display:flex; justify-content:space-between; align-items:center;
+  z-index:10; color:var(--cream);
+}
+.brand,.navlinks { font:10px var(--mono); letter-spacing:.13em; text-transform:uppercase; }
+.navlinks { display:flex; gap:25px; }
+.navlinks a { opacity:.75; transition:opacity .3s; }
+.navlinks a:hover { opacity:1; }
+.hero {
+  min-height:100svh; padding:140px 7% 50px; position:relative;
+  display:flex; flex-direction:column; justify-content:center;
+  color:var(--cream); background:var(--dark); overflow:hidden;
+}
+.ambient {
+  position:absolute; inset:-20%;
+  background:
+    radial-gradient(ellipse at 70% 38%,#71334d 0%,transparent 36%),
+    radial-gradient(ellipse at 20% 80%,#46172b 0%,transparent 40%);
+  animation:drift 12s ease-in-out infinite alternate;
+}
+@keyframes drift {
+  to { transform:translate3d(-3%,3%,0) scale(1.12); }
+}
+.grain {
+  position:absolute; inset:0; opacity:.09; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+.hero-content { position:relative; }
+.eyebrow,.micro {
+  font:10px var(--mono); letter-spacing:.16em; text-transform:uppercase;
+}
+.eyebrow { color:var(--rose); }
+h1 {
+  font:clamp(4.1rem,13.8vw,12rem)/.87 var(--serif);
+  font-weight:400; letter-spacing:-.065em; margin:35px 0;
+}
+h1 .line { display:block; overflow:hidden; padding-bottom:.08em; }
+h1 .line span {
+  display:inline-block; transform:translateY(120%);
+  animation:rise 1.2s cubic-bezier(.16,1,.3,1) forwards;
+}
+h1 .line:nth-child(2) span { animation-delay:.16s; }
+@keyframes rise { to { transform:translateY(0); } }
+em { color:var(--rose); font-weight:400; }
+.hero-bottom {
+  display:flex; justify-content:space-between; align-items:end;
+  gap:30px; margin-top:25px;
+}
+.hero-bottom p { max-width:370px; color:#d3c4c6; font-size:14px; line-height:1.8; }
+.scroll {
+  font:10px var(--mono); letter-spacing:.12em; text-transform:uppercase;
+  display:flex; gap:12px; align-items:center;
+}
+.scroll span {
+  border:1px solid #806671; border-radius:50%; width:43px; height:43px;
+  display:grid; place-items:center; animation:bob 2s infinite;
+}
+@keyframes bob { 50% { transform:translateY(5px); } }
+.section { padding:125px 7%; }
+.label { font:10px var(--mono); letter-spacing:.15em; text-transform:uppercase; color:var(--wine); margin-bottom:30px; }
+.section-title { font:clamp(3rem,7.5vw,7.5rem)/.98 var(--serif); font-weight:400; letter-spacing:-.055em; margin:0; }
+.about { background:var(--cream); }
+.about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:10%; margin-top:65px; }
+.statement { font:clamp(2rem,4vw,4rem)/1.15 var(--serif); letter-spacing:-.035em; }
+.statement em { color:var(--wine); }
+.copy { max-width:460px; color:#716367; font-size:14px; line-height:1.9; }
+.signature { font:italic 28px var(--serif); color:var(--wine); margin-top:30px; }
+.marquee { background:var(--wine); color:var(--cream); overflow:hidden; padding:25px 0; white-space:nowrap; }
+.track { display:flex; width:max-content; animation:marquee 28s linear infinite; }
+.track span { font:clamp(2.3rem,5vw,5rem) var(--serif); padding:0 28px; }
+.track span:nth-child(even) { color:var(--rose); font-style:italic; }
+@keyframes marquee { to { transform:translateX(-50%); } }
+.work { background:var(--dark); color:var(--cream); }
+.work .label { color:var(--rose); }
+.work .section-title em { color:var(--rose); }
+.work-head { display:flex; justify-content:space-between; gap:35px; align-items:end; margin-bottom:65px; }
+.work-head p { max-width:250px; color:#bcaeb0; font-size:12px; line-height:1.8; }
+.project {
+  display:grid; grid-template-columns:60px 1fr 180px; gap:20px;
+  align-items:center; border-top:1px solid #49383d; padding:34px 0;
+  transition:padding .4s ease, color .3s;
+}
+.project:last-child { border-bottom:1px solid #49383d; }
+.project:hover { padding-left:18px; color:var(--rose); }
+.number { font:11px var(--mono); color:#bd9ca8; }
+.project h3 { font:clamp(1.9rem,4.4vw,4.5rem)/1 var(--serif); font-weight:400; margin:0; letter-spacing:-.04em; }
+.project p { font:10px var(--mono); text-transform:uppercase; letter-spacing:.08em; color:#c0afb3; text-align:right; }
+.project-note { margin-top:35px; font:10px var(--mono); letter-spacing:.08em; color:#a9979c; line-height:1.8; }
+.approach { background:#e9dfd5; }
+.approach-grid { display:grid; grid-template-columns:1fr 1fr; gap:10%; margin-top:65px; }
+.approach-big { font:clamp(2.7rem,6vw,6rem)/1 var(--serif); letter-spacing:-.05em; }
+.approach-big em { color:var(--wine); }
+.step { padding:23px 0; border-top:1px solid #c7b8ae; display:grid; grid-template-columns:40px 1fr; gap:15px; }
+.step:last-child { border-bottom:1px solid #c7b8ae; }
+.step small { color:var(--wine); font:10px var(--mono); }
+.step h3 { font:23px var(--serif); font-weight:400; margin:0 0 8px; }
+.step p { color:#70615d; font-size:12px; line-height:1.8; margin:0; }
+.experience { background:var(--cream); }
+.timeline { margin-top:60px; border-top:1px solid #d2c5bd; }
+.job { display:grid; grid-template-columns:150px 1fr; gap:20px; padding:25px 0; border-bottom:1px solid #d2c5bd; }
+.job time { font:10px var(--mono); color:var(--wine); text-transform:uppercase; }
+.job h3 { font:24px var(--serif); font-weight:400; margin:0 0 6px; }
+.job strong { font:10px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:#806c70; }
+.job p { font-size:12px; line-height:1.8; color:#706367; max-width:550px; }
+.skills { background:var(--wine); color:var(--cream); }
+.skills .label { color:var(--rose); }
+.skills .section-title em { color:var(--rose); }
+.skill-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:50px; }
+.skill {
+  border:1px solid #a26b7f; padding:14px 18px; border-radius:50px;
+  font:11px var(--mono); transition:background .3s,transform .3s;
+}
+.skill:hover { background:#8a3a57; transform:translateY(-4px); }
+.contact {
+  background:var(--dark); color:var(--cream); min-height:80svh;
+  display:flex; flex-direction:column; justify-content:space-between;
+  position:relative; overflow:hidden;
+}
+.contact:before {
+  content:""; position:absolute; width:70vw; height:70vw; border-radius:50%;
+  right:-35vw; bottom:-40vw;
+  background:radial-gradient(circle,#702b47,transparent 68%); pointer-events:none;
+}
+.contact .label { color:var(--rose); }
+.contact h2 { font:clamp(3.7rem,11vw,10.5rem)/.9 var(--serif); font-weight:400; letter-spacing:-.06em; margin:65px 0; position:relative; }
+.email { display:inline-block; border-bottom:1px solid #9e858e; padding-bottom:12px; font:12px var(--mono); position:relative; }
+footer { border-top:1px solid #49383d; margin-top:100px; padding-top:20px; display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; color:#bcaeb0; font:10px var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+.reveal { opacity:0; transform:translateY(32px); transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1); }
+.reveal.in { opacity:1; transform:translateY(0); }
+@media(max-width:700px) {
+  .navlinks { gap:12px; font-size:9px; }
+  .hero { padding:130px 6% 40px; }
+  h1 { font-size:clamp(3.6rem,16vw,7rem); }
+  .hero-bottom { align-items:flex-start; flex-direction:column; }
+  .section { padding:85px 6%; }
+  .about-grid,.approach-grid { grid-template-columns:1fr; gap:35px; }
+  .work-head { align-items:flex-start; flex-direction:column; }
+  .project { grid-template-columns:30px 1fr; gap:12px; padding:25px 0; }
+  .project p { grid-column:2; text-align:left; margin:0; }
+  .job { grid-template-columns:85px 1fr; gap:12px; }
+  .job h3 { font-size:20px; }
+  footer { margin-top:65px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; }
+  .reveal { opacity:1; transform:none; }
+}
+</style>
 </head>
 <body>
-  <header class="wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#home">NOOR AMJAD</a>
-      <div class="navlinks">
-        <a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="wrap hero" id="home">
-      <div>
-        <div class="eyebrow">Business · Research · Analysis</div>
-        <h1>The work<br>behind the <em>titles.</em></h1>
-        <p class="intro">I explore how research, structured thinking, and practical execution can help people make better-informed decisions. This portfolio brings together selected work across business development, ESG research, data analysis, and project coordination.</p>
-        <div class="actions">
-          <a class="btn primary" href="#work">Explore selected work ↓</a>
-          <a class="btn secondary" href="#contact">Get in touch ↗</a>
-        </div>
-      </div>
-      <aside class="hero-note">
-        <p><strong>A working archive, not just a list of roles.</strong></p>
-        <p>Each case study will show the question, the approach, the evidence, and my specific contribution. Work in progress will be labelled clearly.</p>
-      </aside>
-    </section>
-
-    <div class="ticker"><div class="wrap">Curiosity → Evidence → Structure → Execution</div></div>
-
-    <section class="wrap" id="work">
-      <div class="section-head">
-        <div class="eyebrow">01 / Selected work</div>
-        <div><h2>Questions worth investigating.</h2><p>These are starting points for case studies. Replace each description with verified details and link to a public, permission-cleared sample before treating it as a completed portfolio project.</p></div>
-      </div>
-      <div class="projects">
-        <article class="project">
-          <div class="project-top"><span>Research / ESG</span><span>01</span></div>
-          <h3>What do sustainability disclosures actually reveal?</h3>
-          <p>A comparative look at ESG reporting, disclosure quality, and the use of GRI and SASB frameworks across companies.</p>
-          <a href="#contact">Case study being prepared ↗</a>
-          <div class="note">Add: your report, sources, methodology, and the sections you personally completed.</div>
-        </article>
-        <article class="project">
-          <div class="project-top"><span>Data / Analysis</span><span>02</span></div>
-          <h3>Finding patterns in learner application data.</h3>
-          <p>A data analysis project focused on forecasting application patterns, evaluating models, and interpreting results responsibly.</p>
-          <a href="#contact">Case study being prepared ↗</a>
-          <div class="note">Add: dataset context, code or notebook, verified metrics, and limitations.</div>
-        </article>
-        <article class="project">
-          <div class="project-top"><span>Business / Research</span><span>03</span></div>
-          <h3>Turning prospect research into a usable process.</h3>
-          <p>A business development workflow for researching prospects, recording outreach, qualifying leads, and managing follow-ups.</p>
-          <a href="#contact">Case study being prepared ↗</a>
-          <div class="note">Add: a redacted tracker or recreated example. Do not publish customer or company-confidential data.</div>
-        </article>
-        <article class="project">
-          <div class="project-top"><span>Operations / Delivery</span><span>04</span></div>
-          <h3>Making collaborative work easier to follow.</h3>
-          <p>A project coordination case study about task ownership, documentation, milestones, and communicating progress.</p>
-          <a href="#contact">Case study being prepared ↗</a>
-          <div class="note">Add: a sample project plan and a precise explanation of your role versus the team's work.</div>
-        </article>
-      </div>
-    </section>
-
-    <section class="principles" id="approach">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">02 / Approach</div>
-          <div><h2>How I try to work.</h2><p>These principles should be supported by examples in the case studies, not treated as claims that evidence is unnecessary.</p></div>
-        </div>
-        <div class="principle-grid">
-          <article class="principle"><div class="num">01 / UNDERSTAND</div><h3>Start with the question.</h3><p>Clarify the problem, constraints, audience, and what a useful answer would look like.</p></article>
-          <article class="principle"><div class="num">02 / EXAMINE</div><h3>Make the evidence visible.</h3><p>Show sources, assumptions, decisions, and limitations so a reader can follow the reasoning.</p></article>
-          <article class="principle"><div class="num">03 / DELIVER</div><h3>Turn thinking into something usable.</h3><p>Organize findings into reports, trackers, analysis, or workflows that help someone take the next step.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap" id="experience">
-      <div class="section-head">
-        <div class="eyebrow">03 / Experience</div>
-        <div><h2>Where the work happened.</h2><p>Verify every title, organisation, date, and responsibility against your records before publishing. Keep this section concise; use the case studies to show depth.</p></div>
-      </div>
-      <div class="timeline">
-        <article class="role"><time>VERIFY DATES</time><div><h3>Business Development · FreshDrop</h3><p>Describe prospect research, lead qualification, outreach tracking, and follow-up responsibilities that you personally performed.</p></div></article>
-        <article class="role"><time>VERIFY DATES</time><div><h3>ESG Research · Internship / Project</h3><p>Enter the exact programme and organisation relationship, reporting period, and your individual contribution.</p></div></article>
-        <article class="role"><time>VERIFY DATES</time><div><h3>Business Operations & Compliance Research · Pepagora</h3><p>Describe documented research, operations, coordination, or compliance-related responsibilities accurately.</p></div></article>
-        <article class="role"><time>VERIFY DATES</time><div><h3>Data Analysis · Internship / Project</h3><p>Identify the programme, project, tools used, and the work you completed as an individual and as a team.</p></div></article>
-        <article class="role"><time>VERIFY DATES</time><div><h3>Teaching & Tutoring</h3><p>Summarize the subjects, learner groups, educational resources, and experience you can substantiate.</p></div></article>
-      </div>
-      <p class="small" style="margin-top:16px">Template note: remove or revise any entry that is inaccurate, not yet verified, or not relevant to the opportunities you are targeting.</p>
-    </section>
-
-    <section class="wrap" id="skills">
-      <div class="section-head">
-        <div class="eyebrow">04 / Skills</div>
-        <div><h2>Capabilities, demonstrated in context.</h2><p>Keep only skills you can support with a real example. Link each skill to a project or artefact when possible.</p></div>
-      </div>
-      <div class="skills">
-        <span class="chip">Market research</span><span class="chip">Business development</span><span class="chip">Lead research</span><span class="chip">Excel / Sheets</span><span class="chip">ESG benchmarking</span><span class="chip">Report writing</span><span class="chip">Project coordination</span><span class="chip">Data analysis</span><span class="chip">Python — verify proficiency</span><span class="chip">HTML / CSS — verify proficiency</span><span class="chip">Teaching & tutoring</span>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap contact-inner">
-        <div>
-          <div class="eyebrow">05 / Contact</div>
-          <h2>Have a question<br>or a project in mind?</h2>
-          <p>For opportunities, collaboration, or questions about a project, reach out through the professional links below.</p>
-        </div>
-        <div>
-          <p><strong>Email</strong><br><a href="mailto:REPLACE-WITH-YOUR-EMAIL@example.com">Replace with your professional email</a></p>
-          <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Add your LinkedIn profile URL</a></p>
-          <p><strong>CV</strong><br>Upload a public PDF to this repository and replace this text with its link.</p>
-          <p class="small">Only publish contact information you are comfortable making public.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap"><span>© <span id="year"></span> Noor Amjad</span><span>Built with care · Hosted on GitHub Pages</span></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<div class="loader"><p>NOOR AMJAD &nbsp; / &nbsp; THE PORTFOLIO</p></div>
+<nav>
+  <a class="brand" href="#top">Noor Amjad ®</a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div class="ambient"></div><div class="grain"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Research · Strategy · Operations · Teaching</div>
+    <h1><span class="line"><span>The work</span></span><span class="line"><span>behind the <em>titles.</em></span></span></h1>
+    <div class="hero-bottom">
+      <p>A growing portfolio of ideas explored, information organized, teams supported, and work brought to life. An ongoing record of how I think, learn, and contribute.</p>
+      <a class="scroll" href="#about"><span>↓</span> Enter the story</a>
+    </div>
+  </div>
+</header>
+<section class="section about" id="about">
+  <div class="label reveal">01 / A little context</div>
+  <h2 class="section-title reveal">Curiosity, with<br><em>follow-through.</em></h2>
+  <div class="about-grid">
+    <div class="statement reveal">I’m interested in the space between <em>people, information,</em> and the decisions that move work forward.</div>
+    <div class="copy reveal">
+      <p>I’m Noor, a high-school graduate building experience across business development, research, data analysis, project coordination, and teaching.</p>
+      <p>This portfolio brings together selected projects and practical work: what I set out to understand, how I approached it, and what I learned along the way.</p>
+      <p>Rather than presenting a list of titles, I want to make the thinking and contribution behind the work visible.</p>
+      <div class="signature">Noor</div>
+    </div>
+  </div>
+</section>
+<div class="marquee"><div class="track">
+  <span>Observe closely</span><span>✳</span><span>Ask better questions</span><span>✳</span><span>Make the work matter</span><span>✳</span>
+  <span>Observe closely</span><span>✳</span><span>Ask better questions</span><span>✳</span><span>Make the work matter</span><span>✳</span>
+</div></div>
+<section class="section work" id="work">
+  <div class="work-head reveal">
+    <div><div class="label">02 / Selected work</div><h2 class="section-title">Different questions.<br><em>One curious mind.</em></h2></div>
+    <p>Projects should show the question, the approach, the contribution, and the evidence. These are the chapters I’m developing.</p>
+  </div>
+  <div>
+    <a class="project reveal" href="#contact"><span class="number">01</span><h3>ESG benchmarking</h3><p>Research / Disclosure ↗</p></a>
+    <a class="project reveal" href="#contact"><span class="number">02</span><h3>Data analysis</h3><p>Forecasting / Insights ↗</p></a>
+    <a class="project reveal" href="#contact"><span class="number">03</span><h3>Business development</h3><p>Market research / Outreach ↗</p></a>
+    <a class="project reveal" href="#contact"><span class="number">04</span><h3>Project coordination</h3><p>Planning / Collaboration ↗</p></a>
+    <a class="project reveal" href="#contact"><span class="number">05</span><h3>Teaching & learning</h3><p>Education / Communication ↗</p></a>
+  </div>
+  <p class="project-note">PROJECT DETAILS WILL BE ADDED AFTER CONTRIBUTIONS, DATES, AND SHAREABLE EVIDENCE ARE VERIFIED.</p>
+</section>
+<section class="section approach" id="approach">
+  <div class="label reveal">03 / How I work</div>
+  <h2 class="section-title reveal">Good work is<br><em>considered work.</em></h2>
+  <div class="approach-grid">
+    <div class="approach-big reveal">From a loose question to a <em>clear next step.</em></div>
+    <div>
+      <div class="step reveal"><small>01</small><div><h3>Understand the context</h3><p>Clarify the question, the people involved, and what a useful outcome would look like.</p></div></div>
+      <div class="step reveal"><small>02</small><div><h3>Gather and examine</h3><p>Find relevant information, check its quality, and separate evidence from assumptions.</p></div></div>
+      <div class="step reveal"><small>03</small><div><h3>Make it usable</h3><p>Organize findings into a clear document, analysis, plan, or next action.</p></div></div>
+      <div class="step reveal"><small>04</small><div><h3>Reflect and improve</h3><p>Review what worked, what remains uncertain, and what could be done better.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="section experience" id="experience">
+  <div class="label reveal">04 / Experience</div>
+  <h2 class="section-title reveal">Learning by<br><em>doing the work.</em></h2>
+  <div class="timeline">
+    <div class="job reveal"><time>2026 · verify</time><div><h3>Business Development</h3><strong>FreshDrop</strong><p>Lead research, prospect tracking, and business outreach support. Confirm exact dates and scope before publishing.</p></div></div>
+    <div class="job reveal"><time>2026 · verify</time><div><h3>Research & Operations Projects</h3><strong>Remote internships / project work</strong><p>ESG research, project coordination, business compliance research, and data analysis across selected projects.</p></div></div>
+    <div class="job reveal"><time>2024–2026</time><div><h3>Teaching & Tutoring</h3><strong>Classroom and private tutoring</strong><p>Teaching ICT and supporting learners. Add verified subjects, dates, and responsibilities before publication.</p></div></div>
+  </div>
+</section>
+<section class="section skills">
+  <div class="label reveal">05 / Tools & areas</div>
+  <h2 class="section-title reveal">A toolkit in<br><em>the making.</em></h2>
+  <div class="skill-list reveal">
+    <span class="skill">Research</span><span class="skill">Business Development</span><span class="skill">ESG Benchmarking</span><span class="skill">Data Analysis</span><span class="skill">Excel</span><span class="skill">Python</span><span class="skill">Project Coordination</span><span class="skill">Stakeholder Communication</span><span class="skill">Teaching</span><span class="skill">Documentation</span><span class="skill">Market Research</span>
+  </div>
+</section>
+<section class="section contact" id="contact">
+  <div class="label reveal">06 / The next chapter</div>
+  <div class="reveal">
+    <h2>Let’s make<br>something <em>matter.</em></h2>
+    <a class="email" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com ↗</a>
+  </div>
+  <footer><span>© 2026 Noor Amjad</span><span>Built with intention</span><a href="#top">Back to top ↑</a></footer>
+</section>
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => document.querySelector('.loader').classList.add('hide'), 900);
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
